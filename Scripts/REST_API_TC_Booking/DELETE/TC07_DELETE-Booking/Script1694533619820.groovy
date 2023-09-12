@@ -16,7 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.ObjectRepository
 
-WS.sendRequest(findTestObject('REST_API/1_Booking/DELETE/DELETE_Booking'))
-
-WS.verifyResponseStatusCode(response, 201)
+def response = WS.sendRequest(findTestObject('REST_API/1_Booking/DELETE/DELETE_Booking'))

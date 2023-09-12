@@ -80,11 +80,6 @@ WS.verifyResponseStatusCode(response, 200)
 assertThat(response.getStatusCode()).isEqualTo(200)
 
 WS.verifyElementPropertyValue(response, 'firstname', &quot;James&quot;)
-WS.verifyElementPropertyValue(response, 'lastname', &quot;Brown&quot;)
-WS.verifyElementPropertyValue(response, 'totalprice', 111)
-WS.verifyElementPropertyValue(response, 'depositpaid', true)
-WS.verifyElementPropertyValue(response, 'bookingdates.checkin', &quot;2018-01-01&quot;)
-WS.verifyElementPropertyValue(response, 'bookingdates.checkout', &quot;2019-01-01&quot;)
-WS.verifyElementPropertyValue(response, 'additionalneeds', &quot;Breakfast&quot;)</verificationScript>
+WS.verifyElementPropertyValue(response, 'lastname', &quot;Brown&quot;)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

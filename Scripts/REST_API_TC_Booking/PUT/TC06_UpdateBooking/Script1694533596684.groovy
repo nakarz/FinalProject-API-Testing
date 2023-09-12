@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WS.sendRequest(findTestObject('REST_API/1_Booking/PUT/PUT_UpdateBooking'))
+def response = WS.sendRequest(findTestObject('REST_API/1_Booking/PUT/PUT_UpdateBooking'))
 
 WS.verifyElementPropertyValue(response, 'firstname', "James")
 WS.verifyElementPropertyValue(response, 'lastname', "Brown")

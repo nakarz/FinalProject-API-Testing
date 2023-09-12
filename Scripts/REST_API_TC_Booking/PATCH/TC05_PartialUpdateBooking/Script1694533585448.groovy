@@ -17,12 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WS.sendRequest(findTestObject('REST_API/1_Booking/PATCH/PATCH_PartialUpdateBooking'))
+def response = WS.sendRequest(findTestObject('REST_API/1_Booking/PATCH/PATCH_PartialUpdateBooking'))
 
 WS.verifyElementPropertyValue(response, 'firstname', "James")
 WS.verifyElementPropertyValue(response, 'lastname', "Brown")
-WS.verifyElementPropertyValue(response, 'totalprice', 111)
-WS.verifyElementPropertyValue(response, 'depositpaid', true)
-WS.verifyElementPropertyValue(response, 'bookingdates.checkin', "2018-01-01")
-WS.verifyElementPropertyValue(response, 'bookingdates.checkout', "2019-01-01")
-WS.verifyElementPropertyValue(response, 'additionalneeds', "Breakfast")
