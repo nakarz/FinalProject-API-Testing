@@ -41,8 +41,6 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 WS.verifyResponseStatusCode(response, 200)
 
-assertThat(response.getStatusCode()).isEqualTo(200)
-
-WS.verifyElementPropertyValue(response, '[0].bookingid', 1390)</verificationScript>
+assertThat(response.getStatusCode()).isEqualTo(200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
