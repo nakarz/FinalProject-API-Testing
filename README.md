@@ -1,7 +1,7 @@
 # API Testing for Restful Booker
 
 Here is the test plan:
-https://docs.google.com/document/d/1kzDKOlsjicLcFyYmlnexqt-eLwAcOHCBQgjKdyTDp1U/edit?usp=sharing
+[API Test Plan](https://docs.google.com/document/d/1oU78H_9FmlmMTU3WVqW3NN3osW5u6ObV6VzFCtJd7nY/edit?usp=sharing)
 
 |                |Method                        |
 |----------------|-------------------------------|
