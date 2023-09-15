@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Summary: Najwa - Test Case Import Jira - Get Booking Id By Name
+Description: @AuthToken
+Feature: Test Scenario for Booking By Name
+As a user, I want to get booking Ids filtered by Name
+
+Background:
+	* url &quot;[https://restful-booker.herokuapp.com/&quot;|https://restful-booker.herokuapp.com/%22]
+
+@TCJira1
+Scenario: Generate user token	
+	Given path &quot;/auth&quot;
+	And header Content-Type = 'application/json'
+	And request '{&quot;token&quot;:&quot;#(tokenUser)&quot;}
+	When method POST
+	Then status 200
+	* def responseUserToken = response
+
+@TCJira2
+Scenario: Get Booking Id By Name
+	Given path &quot;/booking?firstname=Jim&amp;lastname=Brown&quot;
+	And header Content-Type = 'application/json'
+	And request '{&quot;bookingid&quot;:&quot;#(bookingIdByName)&quot;}'
+	When method GET
+	Then status 200
+	* def idResultByName = response</description>
+   <name>ABP-3 Najwa - Test Case Import Jira - Get Booking Id By Name</name>
+   <tag>jira-integration</tag>
+   <integratedEntity>
+      <productName>JIRA</productName>
+      <properties>
+         <entry>
+            <key>integratedValue</key>
+            <value>{&quot;jiraIssue&quot;:{&quot;fields&quot;:{&quot;customFields&quot;:{&quot;customfield_10034&quot;:&quot;@AuthToken\nFeature: Test Scenario for Booking By Name\nAs a user, I want to get booking Ids filtered by Name\n\nBackground:\n\t* url \&quot;https://restful-booker.herokuapp.com/\&quot;\n\n@TCJira1\nScenario: Generate user token\t\n\tGiven path \&quot;/auth\&quot;\n\tAnd header Content-Type \u003d \u0027application/json\u0027\n\tAnd request \u0027{\&quot;token\&quot;:\&quot;#(tokenUser)\&quot;}\n\tWhen method POST\n\tThen status 200\n\t* def responseUserToken \u003d response\n\n@TCJira2\nScenario: Get Booking Id By Name\n\tGiven path \&quot;/booking?firstname\u003dJim\u0026lastname\u003dBrown\&quot;\n\tAnd header Content-Type \u003d \u0027application/json\u0027\n\tAnd request \u0027{\&quot;bookingid\&quot;:\&quot;#(bookingIdByName)\&quot;}\u0027\n\tWhen method GET\n\tThen status 200\n\t* def idResultByName \u003d response&quot;,&quot;customfield_10018&quot;:{&quot;hasEpicLinkFieldDependency&quot;:false,&quot;showField&quot;:false,&quot;nonEditableReason&quot;:{&quot;reason&quot;:&quot;PLUGIN_LICENSE_ERROR&quot;,&quot;message&quot;:&quot;The Parent Link is only available to Jira Premium users.&quot;}},&quot;customfield_10019&quot;:&quot;0|i00033:&quot;},&quot;status&quot;:{&quot;id&quot;:10003,&quot;description&quot;:&quot;&quot;,&quot;iconUrl&quot;:&quot;https://ksat08git.atlassian.net/&quot;,&quot;self&quot;:&quot;https://ksat08git.atlassian.net/rest/api/2/status/10003&quot;,&quot;name&quot;:&quot;To Do&quot;},&quot;project&quot;:{&quot;self&quot;:&quot;https://ksat08git.atlassian.net/rest/api/2/project/10002&quot;,&quot;key&quot;:&quot;ABP&quot;,&quot;id&quot;:10002,&quot;name&quot;:&quot;API Based Project&quot;},&quot;components&quot;:[],&quot;summary&quot;:&quot;Najwa - Test Case Import Jira - Get Booking Id By Name&quot;,&quot;description&quot;:&quot;@AuthToken\nFeature: Test Scenario for Booking By Name\nAs a user, I want to get booking Ids filtered by Name\n\nBackground:\n\t* url \&quot;[https://restful-booker.herokuapp.com/\&quot;|https://restful-booker.herokuapp.com/%22]\n\n@TCJira1\nScenario: Generate user token\t\n\tGiven path \&quot;/auth\&quot;\n\tAnd header Content-Type \u003d \u0027application/json\u0027\n\tAnd request \u0027{\&quot;token\&quot;:\&quot;#(tokenUser)\&quot;}\n\tWhen method POST\n\tThen status 200\n\t* def responseUserToken \u003d response\n\n@TCJira2\nScenario: Get Booking Id By Name\n\tGiven path \&quot;/booking?firstname\u003dJim\u0026lastname\u003dBrown\&quot;\n\tAnd header Content-Type \u003d \u0027application/json\u0027\n\tAnd request \u0027{\&quot;bookingid\&quot;:\&quot;#(bookingIdByName)\&quot;}\u0027\n\tWhen method GET\n\tThen status 200\n\t* def idResultByName \u003d response&quot;,&quot;reporter&quot;:{&quot;emailAddress&quot;:&quot;najwa.kariza12@gmail.com&quot;,&quot;active&quot;:true,&quot;displayName&quot;:&quot;Najwa Kariza&quot;,&quot;self&quot;:&quot;https://ksat08git.atlassian.net/rest/api/2/user?accountId\u003d623517091f014e0069ce9dfc&quot;},&quot;assignee&quot;:{&quot;emailAddress&quot;:&quot;najwa.kariza12@gmail.com&quot;,&quot;active&quot;:true,&quot;displayName&quot;:&quot;Najwa Kariza&quot;,&quot;self&quot;:&quot;https://ksat08git.atlassian.net/rest/api/2/user?accountId\u003d623517091f014e0069ce9dfc&quot;},&quot;priority&quot;:{&quot;id&quot;:3,&quot;self&quot;:&quot;https://ksat08git.atlassian.net/rest/api/2/priority/3&quot;,&quot;name&quot;:&quot;Medium&quot;},&quot;votes&quot;:{&quot;self&quot;:&quot;https://ksat08git.atlassian.net/rest/api/2/issue/ABP-3/votes&quot;,&quot;votes&quot;:0,&quot;hasVoted&quot;:false},&quot;fixVersions&quot;:[],&quot;subtasks&quot;:[],&quot;labels&quot;:[]},&quot;self&quot;:&quot;https://ksat08git.atlassian.net/rest/api/2/issue/10016&quot;,&quot;key&quot;:&quot;ABP-3&quot;,&quot;id&quot;:10016}}</value>
+         </entry>
+      </properties>
+      <type>TESTCASE</type>
+   </integratedEntity>
+   <comment></comment>
+   <testCaseGuid>1e4228b2-0ccd-475a-afed-f451f853a855</testCaseGuid>
+</TestCaseEntity>

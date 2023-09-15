@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC02_GET-All-Booking</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4b4edb83-5cca-48b7-ae31-4402ba6b1840</testCaseGuid>
+</TestCaseEntity>
